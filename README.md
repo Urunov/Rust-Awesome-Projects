@@ -14,8 +14,8 @@
          ![Screen Shot 2020-11-23 at 11 59 43 AM](https://user-images.githubusercontent.com/11626327/99925990-70b7ee00-2d83-11eb-9403-880a5ec4482e.png)
 
 
-  *  1.2 Hello World by Rust~!
-  *  1.3 Hello Cargo~!
+  *  1.2 [Hello World by Rust~!](https://github.com/Urunov/Rust-Awesome-Projects/tree/master/Part-1.%20Fundamentals)
+  
 
 
 
