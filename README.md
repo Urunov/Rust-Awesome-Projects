@@ -9,6 +9,8 @@
        
          <img width="565" alt="Screen Shot 2020-11-23 at 11 29 11 AM" src="https://user-images.githubusercontent.com/11626327/99924904-63006980-2d7f-11eb-9ac9-1a6437a1c341.png">
          
+       - [JetBrain may Representers of the statistic values :](https://www.jetbrains.com/lp/devecosystem-2019/rust/)
+       
          ![Screen Shot 2020-11-23 at 11 59 43 AM](https://user-images.githubusercontent.com/11626327/99925990-70b7ee00-2d83-11eb-9403-880a5ec4482e.png)
 
 
