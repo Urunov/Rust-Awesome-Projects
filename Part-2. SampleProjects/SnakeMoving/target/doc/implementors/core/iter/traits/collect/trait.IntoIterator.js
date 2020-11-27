@@ -1,0 +1,7 @@
+(function() {var implementors = {};
+implementors["core_foundation"] = [{"text":"impl&lt;'a, T:&nbsp;FromVoid&gt; IntoIterator for &amp;'a CFArray&lt;T&gt;","synthetic":false,"types":[]}];
+implementors["crossbeam_channel"] = [{"text":"impl&lt;'a, T&gt; IntoIterator for &amp;'a Receiver&lt;T&gt;","synthetic":false,"types":[]},{"text":"impl&lt;T&gt; IntoIterator for Receiver&lt;T&gt;","synthetic":false,"types":[]}];
+implementors["image"] = [{"text":"impl&lt;R:&nbsp;BufRead&gt; IntoIterator for HdrDecoder&lt;R&gt;","synthetic":false,"types":[]}];
+implementors["proc_macro2"] = [{"text":"impl IntoIterator for TokenStream","synthetic":false,"types":[]}];
+implementors["syn"] = [{"text":"impl IntoIterator for Fields","synthetic":false,"types":[]},{"text":"impl&lt;'a&gt; IntoIterator for &amp;'a Fields","synthetic":false,"types":[]},{"text":"impl&lt;'a&gt; IntoIterator for &amp;'a mut Fields","synthetic":false,"types":[]},{"text":"impl&lt;T, P&gt; IntoIterator for Punctuated&lt;T, P&gt;","synthetic":false,"types":[]},{"text":"impl&lt;'a, T, P&gt; IntoIterator for &amp;'a Punctuated&lt;T, P&gt;","synthetic":false,"types":[]},{"text":"impl&lt;'a, T, P&gt; IntoIterator for &amp;'a mut Punctuated&lt;T, P&gt;","synthetic":false,"types":[]},{"text":"impl IntoIterator for Error","synthetic":false,"types":[]},{"text":"impl&lt;'a&gt; IntoIterator for &amp;'a Error","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

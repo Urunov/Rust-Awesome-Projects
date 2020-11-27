@@ -1,6 +1,8 @@
 fn main() {
     function();
 
+
+    println!("The value of x is {}", x);
 }
 
 fn function(){
@@ -10,3 +12,4 @@ fn function(){
     let sum = a + b;
     println!("Sum= {}", sum);
 }
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `piston` crate."><meta name="keywords" content="rust, rustlang, rust-lang, piston"><title>piston - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../ayu.css" disabled ><script src="../storage.js"></script><noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../piston/index.html'><div class='logo-container rust-logo'><img src='../rust-logo.png' alt='logo'></div></a><p class='location'>Crate piston</p><div class='block version'><p>Version 0.52.1</p></div><div class="sidebar-elems"><a id='all-types' href='all.html'><p>See all piston's items</p></a><div class="block items"><ul><li><a href="#reexports">Re-exports</a></li><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#traits">Traits</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'piston', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><span class="help-button">?</span>
+                <a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/piston/lib.rs.html#1-140' title='goto source code'>[src]</a></span><span class='in-band'>Crate <a class="mod" href=''>piston</a></span></h1><div class='docblock'><p>A modular game engine written in Rust.</p>
+<p>This is the core library of the Piston Game engine.
+The <code>Piston</code> core library reexports the core modules.</p>
+<p>If you are looking for a convenient window wrapper,
+see <a href="https://github.com/pistondevelopers/piston_window">piston_window</a>.</p>
+<p>For examples, see <a href="https://github.com/pistondevelopers/piston-examples">piston-examples</a>.</p>
+<p>For more information and an overview, see <a href="https://github.com/pistondevelopers/piston">Piston's README in the core repository</a>.</p>
+<h3 id="design" class="section-header"><a href="#design">Design</a></h3>
+<p>The Piston core is a thin and modular abstraction for user input, window and event loop.
+This functionality is separated into 3 core modules.</p>
+<p>The core modules are intended to be used directly by generic libraries.
+By depending directly on core modules, it is easier to maintain the ecosystem.</p>
+<p>This library is intended to be used in application code.
+When you write application code, it is common to separate reusable code,
+which depends on various abstractions, from platform specific code.
+The reusable code that you write for applications might use the Piston core.</p>
+<p>The default programming pattern in Piston is Model-View-Controller:</p>
+<ul>
+<li>A controller handles events and manipulates a model</li>
+<li>A view renders a model on the screen</li>
+</ul>
+<p>For more information about this pattern, see <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller (Wikipedia)</a>.</p>
+<p>The most important traits in Piston are the following:</p>
+<ul>
+<li><a href="../piston/trait.GenericEvent.html">GenericEvent</a> (allows handling of events for controllers)</li>
+<li><a href="../piston/trait.Window.html">Window</a> (allows polling of events)</li>
+</ul>
+<h3 id="link-to-documentation-for-core-modules" class="section-header"><a href="#link-to-documentation-for-core-modules">Link to documentation for core modules</a></h3>
+<ul>
+<li><a href="https://docs.rs/pistoncore-input">pistoncore-input</a>
+(User input and event handling)</li>
+<li><a href="https://docs.rs/pistoncore-window">pistoncore-window</a>
+(Window abstraction)</li>
+<li><a href="https://docs.rs/pistoncore-event_loop">pistoncore-event_loop</a>
+(Event loop)</li>
+</ul>
+<h3 id="points-vs-pixels" class="section-header"><a href="#points-vs-pixels">Points vs Pixels</a></h3>
+<p>Since some computer screens have higher resolution than others,
+it is convenient to use two kinds of coordinate systems:</p>
+<ul>
+<li>A pixel is a single square on the screen</li>
+<li>A point is a unit used by window events and 2D graphics</li>
+</ul>
+<p>For example, the mouse cursor position events are measured in points.</p>
+<p>It is common to use points for 2D graphics to match window coordinates.</p>
+<p>Unintentional blurring, e.g. of rendered text, might be a side effect incorrect sampling.</p>
+<h3 id="about-piston-as-a-game-engine" class="section-header"><a href="#about-piston-as-a-game-engine">About Piston as a Game Engine</a></h3>
+<p>Piston is a modular game engine with a minimal core abstraction.
+The core connects input events, window and event loop.</p>
+<p>Piston is designed for optimal modularity,
+making it optional to even use the core modules in many cases.
+The goal is to have as little abstraction as possible,
+while making larger libraries as independent as possible.
+The motivation is to encourage diversity and experimentation with various abstractions,
+without getting tied up to a fixed set of platforms, abstractions or vendors.
+You can combine Piston with any other library in Rust's ecosystem.
+This design has worked very well so far.</p>
+<p>For example (a few libraries, there are many more):</p>
+<ul>
+<li><a href="https://github.com/pistondevelopers/image">Image</a> library is standalone
+from both the core and the 2D graphics library,
+only connected through the 2D graphics backends.</li>
+<li><a href="https://github.com/pistondevelopers/graphics">Piston's 2D graphics</a> is optional and can be used without a window backend.
+The window backend can be used without a 2D graphics backend, and so on.</li>
+<li>For image processing, see <a href="https://github.com/pistondevelopers/imageproc">Imageproc</a>.</li>
+<li><a href="https://github.com/pistondevelopers/dyon">Dyon</a> is a Rusty dynamically typed scripting language,
+using a lifetime checker without garbage collection.</li>
+</ul>
+<p>For more information and an overview, see <a href="https://github.com/pistondevelopers/piston">Piston's README in the core repository</a>.</p>
+<p>When writing a library, please depend directly on the core module needed.
+This makes it less likely that the library will break.</p>
+<p>When writing an application, it is acceptable to use the <code>Piston</code> core.
+To use it you usually need a window backend:</p>
+<ul>
+<li><a href="https://github.com/pistondevelopers/glutin_window">pistoncore-glutin_window</a></li>
+<li><a href="https://github.com/pistondevelopers/sdl2_window">pistoncore-sdl2_window</a></li>
+<li><a href="https://github.com/pistondevelopers/glfw_window">pistoncore-glfw_window</a></li>
+</ul>
+<p>There are a <a href="https://crates.io/search?q=piston%20window">few other window backends as well</a>.</p>
+<p>Plus a 2D graphics backend (optional):</p>
+<ul>
+<li><a href="https://github.com/pistondevelopers/opengl_graphics">piston2d-opengl_graphics</a></li>
+<li><a href="https://github.com/pistondevelopers/gfx_graphics">piston2d-gfx_graphics</a></li>
+<li><a href="https://github.com/pistondevelopers/glium_graphics">piston2d-glium_graphics</a></li>
+</ul>
+<p>There are a <a href="https://crates.io/search?q=piston%20graphics">few other graphics backends as well</a>.</p>
+<p>You will find examples of how to get started in each 2D graphics backend repository.</p>
+<h3 id="about-piston-as-a-project" class="section-header"><a href="#about-piston-as-a-project">About Piston as a Project</a></h3>
+<p>The Piston project is a huge collaboration across many projects,
+mainly focused on maintenance of libraries and research.
+Since this has been going on since 2014, there is too much out there
+to summarize here, but rougly the project is organized into two open source organizations:</p>
+<ul>
+<li><a href="https://github.com/pistondevelopers/">PistonDevelopers</a> - everything game engine related</li>
+<li><a href="https://github.com/advancedresearch/">AdvancedResearch</a> - everything advanced math related</li>
+</ul>
+<p>In addition we collaborate across organizations with other projects, mainly:</p>
+<ul>
+<li><a href="https://github.com/gfx-rs/">Gfx-rs</a> - everything 3D graphics related</li>
+<li><a href="https://github.com/rustaudio">RustAudio</a> - everything audio related</li>
+</ul>
+<p>In addition there are many other projects and organizations.</p>
+<p>For more information and an overview, see <a href="https://github.com/pistondevelopers/piston">Piston's README in the core repository</a>.</p>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Re-exports</a></h2>
+<table><tr><td><code>pub extern crate <a class="mod" href="../input/index.html" title="mod input">input</a>;</code></td></tr><tr><td><code>pub extern crate <a class="mod" href="../event_loop/index.html" title="mod event_loop">event_loop</a>;</code></td></tr><tr><td><code>pub extern crate <a class="mod" href="../window/index.html" title="mod window">window</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table><tr class='module-item'><td><a class="mod" href="controller/index.html" title='piston::controller mod'>controller</a></td><td class='docblock-short'><p>Back-end agnostic controller events.</p>
+</td></tr><tr class='module-item'><td><a class="mod" href="event_id/index.html" title='piston::event_id mod'>event_id</a></td><td class='docblock-short'><p>Event identifiers.</p>
+</td></tr><tr class='module-item'><td><a class="mod" href="generic_event/index.html" title='piston::generic_event mod'>generic_event</a></td><td class='docblock-short'><p>Trait for generic events</p>
+</td></tr><tr class='module-item'><td><a class="mod" href="keyboard/index.html" title='piston::keyboard mod'>keyboard</a></td><td class='docblock-short'><p>Back-end agnostic keyboard keys.</p>
+</td></tr><tr class='module-item'><td><a class="mod" href="mouse/index.html" title='piston::mouse mod'>mouse</a></td><td class='docblock-short'><p>Back-end agnostic mouse buttons.</p>
+</td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table><tr class='module-item'><td><a class="struct" href="struct.AfterRenderArgs.html" title='piston::AfterRenderArgs struct'>AfterRenderArgs</a></td><td class='docblock-short'><p>After render arguments.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Api.html" title='piston::Api struct'>Api</a></td><td class='docblock-short'><p>Stores graphics API version.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.ButtonArgs.html" title='piston::ButtonArgs struct'>ButtonArgs</a></td><td class='docblock-short'><p>Button arguments.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.CloseArgs.html" title='piston::CloseArgs struct'>CloseArgs</a></td><td class='docblock-short'><p>Close arguments.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.ControllerAxisArgs.html" title='piston::ControllerAxisArgs struct'>ControllerAxisArgs</a></td><td class='docblock-short'><p>Components of a controller axis move event. Not guaranteed consistent across
+backends.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.ControllerButton.html" title='piston::ControllerButton struct'>ControllerButton</a></td><td class='docblock-short'><p>Components of a controller button event. Not guaranteed consistent across
+backends.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.ControllerHat.html" title='piston::ControllerHat struct'>ControllerHat</a></td><td class='docblock-short'><p>Components of a controller hat move event (d-Pad).</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.EventSettings.html" title='piston::EventSettings struct'>EventSettings</a></td><td class='docblock-short'><p>Stores event loop settings.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Events.html" title='piston::Events struct'>Events</a></td><td class='docblock-short'><p>An event loop iterator</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.IdleArgs.html" title='piston::IdleArgs struct'>IdleArgs</a></td><td class='docblock-short'><p>Idle arguments, such as expected idle time in seconds.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.NoWindow.html" title='piston::NoWindow struct'>NoWindow</a></td><td class='docblock-short'><p>A window without user interface, often used in server event loops.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Position.html" title='piston::Position struct'>Position</a></td><td class='docblock-short'><p>Structure to store the window position.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.RenderArgs.html" title='piston::RenderArgs struct'>RenderArgs</a></td><td class='docblock-short'><p>Render arguments.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.ResizeArgs.html" title='piston::ResizeArgs struct'>ResizeArgs</a></td><td class='docblock-short'><p>Resize arguments.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Size.html" title='piston::Size struct'>Size</a></td><td class='docblock-short'><p>Structure to store the window size.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.TouchArgs.html" title='piston::TouchArgs struct'>TouchArgs</a></td><td class='docblock-short'><p>Touch arguments</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.UnsupportedGraphicsApiError.html" title='piston::UnsupportedGraphicsApiError struct'>UnsupportedGraphicsApiError</a></td><td class='docblock-short'><p>An error for when a graphics API is unsupported.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.UpdateArgs.html" title='piston::UpdateArgs struct'>UpdateArgs</a></td><td class='docblock-short'><p>Update arguments, such as delta time in seconds.</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.WindowSettings.html" title='piston::WindowSettings struct'>WindowSettings</a></td><td class='docblock-short'><p>Settings structure for window behavior.</p>
+</td></tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table><tr class='module-item'><td><a class="enum" href="enum.Button.html" title='piston::Button enum'>Button</a></td><td class='docblock-short'><p>Models different kinds of buttons.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.ButtonState.html" title='piston::ButtonState enum'>ButtonState</a></td><td class='docblock-short'><p>Stores button state.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Event.html" title='piston::Event enum'>Event</a></td><td class='docblock-short'><p>Models all events.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.FileDrag.html" title='piston::FileDrag enum'>FileDrag</a></td><td class='docblock-short'><p>Models dragging and dropping files.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.HatState.html" title='piston::HatState enum'>HatState</a></td><td class='docblock-short'><p>Stores controller hat state.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Input.html" title='piston::Input enum'>Input</a></td><td class='docblock-short'><p>Models input events.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Key.html" title='piston::Key enum'>Key</a></td><td class='docblock-short'><p>Represent a keyboard key.
+Keycodes follows SDL http://wiki.libsdl.org/SDLKeycodeLookup</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Loop.html" title='piston::Loop enum'>Loop</a></td><td class='docblock-short'><p>Models loop events.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Motion.html" title='piston::Motion enum'>Motion</a></td><td class='docblock-short'><p>Models different kinds of motion.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.MouseButton.html" title='piston::MouseButton enum'>MouseButton</a></td><td class='docblock-short'><p>Represent a mouse button.</p>
+</td></tr><tr class='module-item'><td><a class="enum" href="enum.Touch.html" title='piston::Touch enum'>Touch</a></td><td class='docblock-short'><p>Stores the touch state.</p>
+</td></tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table><tr class='module-item'><td><a class="constant" href="constant.DEFAULT_MAX_FPS.html" title='piston::DEFAULT_MAX_FPS constant'>DEFAULT_MAX_FPS</a></td><td class='docblock-short'><p>The default maximum frames per second.</p>
+</td></tr><tr class='module-item'><td><a class="constant" href="constant.DEFAULT_UPS.html" title='piston::DEFAULT_UPS constant'>DEFAULT_UPS</a></td><td class='docblock-short'><p>The default updates per second.</p>
+</td></tr><tr class='module-item'><td><a class="constant" href="constant.DEFAULT_UPS_RESET.html" title='piston::DEFAULT_UPS_RESET constant'>DEFAULT_UPS_RESET</a></td><td class='docblock-short'><p>The default delayed updates reset.</p>
+</td></tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table><tr class='module-item'><td><a class="trait" href="trait.AdvancedWindow.html" title='piston::AdvancedWindow trait'>AdvancedWindow</a></td><td class='docblock-short'><p>Trait representing a window with the most features that are still generic.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.AfterRenderEvent.html" title='piston::AfterRenderEvent trait'>AfterRenderEvent</a></td><td class='docblock-short'><p>After rendering and buffers are swapped.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.BuildFromWindowSettings.html" title='piston::BuildFromWindowSettings trait'>BuildFromWindowSettings</a></td><td class='docblock-short'><p>Constructs a window from a <a href="./struct.WindowSettings.html"><code>WindowSettings</code></a>
+object.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.ButtonEvent.html" title='piston::ButtonEvent trait'>ButtonEvent</a></td><td class='docblock-short'><p>Changed button state.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.CloseEvent.html" title='piston::CloseEvent trait'>CloseEvent</a></td><td class='docblock-short'><p>Window is closing.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.ControllerAxisEvent.html" title='piston::ControllerAxisEvent trait'>ControllerAxisEvent</a></td><td class='docblock-short'><p>The position of a controller axis changed.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.CursorEvent.html" title='piston::CursorEvent trait'>CursorEvent</a></td><td class='docblock-short'><p>When window gets or loses cursor.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.EventLoop.html" title='piston::EventLoop trait'>EventLoop</a></td><td class='docblock-short'><p>Methods implemented for changing event loop settings.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.FocusEvent.html" title='piston::FocusEvent trait'>FocusEvent</a></td><td class='docblock-short'><p>When window gets or loses focus.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.GenericEvent.html" title='piston::GenericEvent trait'>GenericEvent</a></td><td class='docblock-short'><p>Implemented by all events.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.IdleEvent.html" title='piston::IdleEvent trait'>IdleEvent</a></td><td class='docblock-short'><p>When background tasks should be performed.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.MouseCursorEvent.html" title='piston::MouseCursorEvent trait'>MouseCursorEvent</a></td><td class='docblock-short'><p>The position of the mouse cursor.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.MouseRelativeEvent.html" title='piston::MouseRelativeEvent trait'>MouseRelativeEvent</a></td><td class='docblock-short'><p>The relative movement of mouse cursor.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.MouseScrollEvent.html" title='piston::MouseScrollEvent trait'>MouseScrollEvent</a></td><td class='docblock-short'><p>The scroll of the mouse wheel.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.OpenGLWindow.html" title='piston::OpenGLWindow trait'>OpenGLWindow</a></td><td class='docblock-short'><p>Trait for OpenGL specific operations on a window.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.PressEvent.html" title='piston::PressEvent trait'>PressEvent</a></td><td class='docblock-short'><p>The press of a button.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.ReleaseEvent.html" title='piston::ReleaseEvent trait'>ReleaseEvent</a></td><td class='docblock-short'><p>The release of a button.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.RenderEvent.html" title='piston::RenderEvent trait'>RenderEvent</a></td><td class='docblock-short'><p>When the next frame should be rendered.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.ResizeEvent.html" title='piston::ResizeEvent trait'>ResizeEvent</a></td><td class='docblock-short'><p>When the window is resized.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.TextEvent.html" title='piston::TextEvent trait'>TextEvent</a></td><td class='docblock-short'><p>When receiving text from user, such as typing a character.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.TouchEvent.html" title='piston::TouchEvent trait'>TouchEvent</a></td><td class='docblock-short'><p>When a touch is started, moved, ended or cancelled.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.UpdateEvent.html" title='piston::UpdateEvent trait'>UpdateEvent</a></td><td class='docblock-short'><p>When the application state should be updated.</p>
+</td></tr><tr class='module-item'><td><a class="trait" href="trait.Window.html" title='piston::Window trait'>Window</a></td><td class='docblock-short'><p>Trait representing the minimum requirements for defining a window.</p>
+</td></tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table><tr class='module-item'><td><a class="type" href="type.ProcAddress.html" title='piston::ProcAddress type'>ProcAddress</a></td><td class='docblock-short'><p>The type of an OpenGL function address.</p>
+</td></tr><tr class='module-item'><td><a class="type" href="type.TimeStamp.html" title='piston::TimeStamp type'>TimeStamp</a></td><td class='docblock-short'><p>The type of time stamp.</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><script>window.rootPath = "../";window.currentCrate = "piston";</script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>
