@@ -1,0 +1,1 @@
+/Users/hamdamboy/Documents/OpenSource/Rust/Part-1.\ Fundamentals/006.collectionType/target/debug/collectionTypes: /Users/hamdamboy/Documents/OpenSource/Rust/Part-1.\ Fundamentals/006.collectionType/src/main.rs
