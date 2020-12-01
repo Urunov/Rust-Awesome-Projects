@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["num_rational"] = [{"text":"impl&lt;T:&nbsp;Integer + Clone&gt; Sum&lt;Ratio&lt;T&gt;&gt; for Ratio&lt;T&gt;","synthetic":false,"types":[]},{"text":"impl&lt;'a, T:&nbsp;Integer + Clone&gt; Sum&lt;&amp;'a Ratio&lt;T&gt;&gt; for Ratio&lt;T&gt;","synthetic":false,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

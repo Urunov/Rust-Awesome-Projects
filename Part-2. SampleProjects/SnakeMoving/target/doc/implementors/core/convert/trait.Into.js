@@ -1,8 +1,0 @@
-(function() {var implementors = {};
-implementors["core_foundation_sys"] = [{"text":"impl Into&lt;Ordering&gt; for CFComparisonResult","synthetic":false,"types":[]}];
-implementors["either"] = [{"text":"impl&lt;L, R&gt; Into&lt;Result&lt;R, L&gt;&gt; for Either&lt;L, R&gt;","synthetic":false,"types":[]}];
-implementors["input"] = [{"text":"impl Into&lt;Option&lt;Input&gt;&gt; for Event","synthetic":false,"types":[]},{"text":"impl Into&lt;Option&lt;Loop&gt;&gt; for Event","synthetic":false,"types":[]}];
-implementors["num_rational"] = [{"text":"impl&lt;T&gt; Into&lt;(T, T)&gt; for Ratio&lt;T&gt;","synthetic":false,"types":[]}];
-implementors["shader_version"] = [{"text":"impl Into&lt;Version&gt; for OpenGL","synthetic":false,"types":[]}];
-implementors["winit"] = [{"text":"impl Into&lt;(f64, f64)&gt; for LogicalPosition","synthetic":false,"types":[]},{"text":"impl Into&lt;(i32, i32)&gt; for LogicalPosition","synthetic":false,"types":[]},{"text":"impl Into&lt;(f64, f64)&gt; for PhysicalPosition","synthetic":false,"types":[]},{"text":"impl Into&lt;(i32, i32)&gt; for PhysicalPosition","synthetic":false,"types":[]},{"text":"impl Into&lt;(f64, f64)&gt; for LogicalSize","synthetic":false,"types":[]},{"text":"impl Into&lt;(u32, u32)&gt; for LogicalSize","synthetic":false,"types":[]},{"text":"impl Into&lt;(f64, f64)&gt; for PhysicalSize","synthetic":false,"types":[]},{"text":"impl Into&lt;(u32, u32)&gt; for PhysicalSize","synthetic":false,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

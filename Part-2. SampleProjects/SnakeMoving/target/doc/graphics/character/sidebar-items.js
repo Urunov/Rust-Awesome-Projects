@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["Character","Holds rendered character data."]],"trait":[["CharacterCache","Stores characters in a buffer and loads them by demand."]]});

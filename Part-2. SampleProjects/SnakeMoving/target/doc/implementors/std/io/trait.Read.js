@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["image"] = [{"text":"impl&lt;R:&nbsp;Read&gt; Read for DxtReader&lt;R&gt;","synthetic":false,"types":[]},{"text":"impl&lt;R:&nbsp;Read&gt; Read for FarbfeldReader&lt;R&gt;","synthetic":false,"types":[]},{"text":"impl&lt;R&gt; Read for GifReader&lt;R&gt;","synthetic":false,"types":[]},{"text":"impl&lt;R&gt; Read for HdrReader&lt;R&gt;","synthetic":false,"types":[]},{"text":"impl&lt;R:&nbsp;Read&gt; Read for PngReader&lt;R&gt;","synthetic":false,"types":[]},{"text":"impl&lt;R&gt; Read for TiffReader&lt;R&gt;","synthetic":false,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

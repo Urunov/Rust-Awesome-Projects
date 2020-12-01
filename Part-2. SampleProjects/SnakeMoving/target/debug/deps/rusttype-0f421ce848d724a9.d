@@ -1,8 +1,0 @@
-/Users/hamdamboy/Documents/OpenSource/Rust/Part-2. SampleProjects/SnakeMoving/target/debug/deps/rusttype-0f421ce848d724a9.rmeta: /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/lib.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/font.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/geometry.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/outliner.rs
-
-/Users/hamdamboy/Documents/OpenSource/Rust/Part-2. SampleProjects/SnakeMoving/target/debug/deps/rusttype-0f421ce848d724a9.d: /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/lib.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/font.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/geometry.rs /Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/outliner.rs
-
-/Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/lib.rs:
-/Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/font.rs:
-/Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/geometry.rs:
-/Users/hamdamboy/.cargo/registry/src/github.com-1ecc6299db9ec823/rusttype-0.9.2/src/outliner.rs:

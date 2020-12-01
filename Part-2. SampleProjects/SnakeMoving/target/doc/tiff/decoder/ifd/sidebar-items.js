@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["Value",""]],"struct":[["Entry",""]],"type":[["Directory","Type representing an Image File Directory"]]});

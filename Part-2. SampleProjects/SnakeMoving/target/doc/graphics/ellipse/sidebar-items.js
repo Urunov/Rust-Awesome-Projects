@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["Border","Ellipse border"],["Ellipse","An ellipse with filled color"]]});
