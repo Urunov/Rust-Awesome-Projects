@@ -2,31 +2,53 @@
 -------------------------------------
 
 ### Part-1. Getting Started
-  *  1.1 [Installation](https://www.rust-lang.org/tools/install)
-       - It looks like you’re running `macOS, Linux, or another Unix-like OS`. To download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.
-            -  `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-       - CLI installation result (MAC OS represents_)
-       
-         <img width="565" alt="Screen Shot 2020-11-23 at 11 29 11 AM" src="https://user-images.githubusercontent.com/11626327/99924904-63006980-2d7f-11eb-9ac9-1a6437a1c341.png">
-         
-       - [JetBrain may Representers of the statistic values :](https://www.jetbrains.com/lp/devecosystem-2019/rust/)
-       
-         ![Screen Shot 2020-11-23 at 11 59 43 AM](https://user-images.githubusercontent.com/11626327/99925990-70b7ee00-2d83-11eb-9403-880a5ec4482e.png)
-
-
-  *  1.2 [Hello World by Rust~!](https://github.com/Urunov/Rust-Awesome-Projects/tree/master/Part-1.%20Fundamentals)
   
+   
+
+### Part-2. Sample Projects
+ 
 
 
 
 
 
 
+## Resource for References: 
 
+My Coding and Represents projects are included in git, and you guys can possible clone for develop Your Rust Projects. Mainly, I plan separated two parts of my reources: Conceptual and Coding resources. 
 
-
-## Resource for References
-   1. [`The Rust Programming Language [online book and materials]`](https://doc.rust-lang.org/book/title-page.html#the-rust-programming-language)
+  * Conceptual Refrences: 
+  
+   1. [Creative Projects for Rust Programmers]( https://www.packtpub.com/product/creative-projects-for-rust-programmers/9781789346220)
+   
    2.  [Rust books](https://github.com/sger/RustBooks)
 
    3. [Why Rust?](https://www.parity.io/why-rust/)
+   
+   4. [Why AWS loves Rust ~?!](https://aws.amazon.com/blogs/opensource/why-aws-loves-rust-and-how-wed-like-to-help/)
+   
+   5. [Idiomatic Rust](https://github.com/mre/idiomatic-rust)
+   
+   6. [Why Discord is switching from Go to Rust](https://blog.discord.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
+   
+   7. [Rust Books](https://github.com/sger/RustBooks)
+   
+   8. [ How to often does Rust change? ](https://steveklabnik.com/writing/how-often-does-rust-change)
+   
+ *  Coding Projects References: 
+  
+   1. [`The Rust Programming Language [online book and materials]`](https://doc.rust-lang.org/book/title-page.html#the-rust-programming-language)
+   
+   2. [Which Programming Languagues Use the Least Electricity? ](https://thenewstack.io/which-programming-languages-use-the-least-electricity/)
+   
+   3. [Rewritten in Rust: Modern Alternatives of Command-Line Tools](https://zaiste.net/posts/shell-commands-rust/)
+   
+   4. [`Writing Rust in Easy English`](https://github.com/Dhghomon/easy_rust/tree/ef1f739acf680dbc9bf5b18f1d965a23ded1b5a5)
+   
+   5. [Clear explanation of Rust’s module system](http://www.sheshbabu.com/posts/rust-module-system/)
+   
+   6. [Writing OS in Rust](https://os.phil-opp.com/)
+   
+   7. [Project and Publication in Rust](http://cliffle.com/)
+   
+
