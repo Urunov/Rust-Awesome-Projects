@@ -1,5 +1,6 @@
+![rust-programming-language](https://user-images.githubusercontent.com/11626327/100709514-9d0de300-33f1-11eb-8d6f-ad3398d6d12b.png)
+
 # The Rust Programming Language
--------------------------------------
 
 ### Part-1. Getting Started
   
