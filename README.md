@@ -4,11 +4,11 @@
 
 ### Part-1. Getting Started
   
-   
+   * Fundamental Concepts and Programming
 
 ### Part-2. Sample Projects
  
-
+  * Projects and Concepts
 
 
 
