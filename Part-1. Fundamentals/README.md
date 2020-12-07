@@ -9,22 +9,16 @@
        
          <img width="565" alt="Screen Shot 2020-11-23 at 11 29 11 AM" src="https://user-images.githubusercontent.com/11626327/99924904-63006980-2d7f-11eb-9ac9-1a6437a1c341.png">
          
-       - [JetBrain may Representers of the statistic values :](https://www.jetbrains.com/lp/devecosystem-2019/rust/)
-       
-         ![Screen Shot 2020-11-23 at 11 59 43 AM](https://user-images.githubusercontent.com/11626327/99925990-70b7ee00-2d83-11eb-9403-880a5ec4482e.png)
+     
 
+ * 1.9 `Loop` 
+ 
+A for loop lets you tell `Rust` what to do each time. But in a for loop, the loop stops after a certain number of times. for loops use ranges very often. You use .. and `..= ` to create a range.
 
-  *  1.2 [Hello World by Rust~!](https://github.com/Urunov/Rust-Awesome-Projects/tree/master/Part-1.%20Fundamentals)
-  
+       * .. creates an exclusive range: 0..3 creates 0, 1, 2.
+       * ..= creates an inclusive range: 0..=3 = 0, 1, 2, 3.
 
-
-
-
-
-
-
-
-
+ 
 ## Resource for References
    1. [`The Rust Programming Language [online book and materials]`](https://doc.rust-lang.org/book/title-page.html#the-rust-programming-language)
    2.  [Rust books](https://github.com/sger/RustBooks)
