@@ -1,5 +1,10 @@
 # The Rust Programming Language
 -------------------------------------
+Most of Project source code used to IntelliJ IDEA (install Plugin Rust) Figure-1. Rust Create New Project. 
+
+<img width="672" alt="Screen Shot 2020-12-08 at 4 48 47 PM" src="https://user-images.githubusercontent.com/11626327/101455175-7ca3d280-3975-11eb-9c7f-51389e6d0fad.png">
+
+Maybe you don't want to install Rust yet, and that's okay. You can go to https://play.rust-lang.org/ and start writing Rust without leaving your browser. You can write your code there and click Run to see the results. 
 
 ### Part-1. Getting Started
   *  1.1 [Installation](https://www.rust-lang.org/tools/install)

@@ -2,9 +2,11 @@
 
 # The Rust Programming Language
 
+Most of Project source code used to IntelliJ IDEA (install Plugin Rust)  or using just browser [playground](https://github.com/Urunov/Rust-Awesome-Projects/tree/master/Part-1.%20Fundamentals). Rust Create New Project. 
+
 ### Part-1. Getting Started
   
-   * Fundamental Concepts and Programming
+   * Fundamental Concepts and [Programming](https://github.com/Dhghomon/)
 
 ### Part-2. Sample Projects
  
