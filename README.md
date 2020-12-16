@@ -54,4 +54,6 @@ My Coding and Represents projects are included in git, and you guys can possible
    
    7. [Project and Publication in Rust](http://cliffle.com/)
    
+   8. [Rust Fronend Project](https://medium.com/swlh/building-a-front-app-with-rust-yes-you-can-and-yew-11e7835d768f)
+   
 
